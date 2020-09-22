@@ -8,9 +8,26 @@
 
 import UIKit
 
+var calculatorCount = 0
+
 class ViewController: UIViewController {
 
     private var userIsInTheMiddleOfTyping: Bool = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calculatorCount += 1
+        print("Loaded up a new Calculator (count = \(calculatorCount))")
+        brain.addUnaryOperation(symbol: "Z") { [weak self] in
+            self?.display.textColor = UIColor.red
+            return sqrt($0)
+        }
+    }
+    
+    deinit {
+        calculatorCount -= 1
+        print("Calculator left the heap (count = \(calculatorCount))")
+    }
     
     @IBOutlet private weak var display: UILabel!
     
