@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Cassini
+//  Smashtag
 //
-//  Created by In Taek Cho on 2020-09-22.
+//  Created by In Taek Cho on 2020-10-06.
 //
 
 import UIKit
