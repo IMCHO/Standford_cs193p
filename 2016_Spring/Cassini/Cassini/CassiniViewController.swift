@@ -76,4 +76,16 @@ extension CassiniViewController: UISplitViewControllerDelegate {
         }
         return false
     }
+    
+    func splitViewController(_ svc: UISplitViewController, topColumnForCollapsingToProposedTopColumn proposedTopColumn: UISplitViewController.Column) -> UISplitViewController.Column {
+//        if svc.contentViewController == self {
+////            if let iVC = secondaryViewController.contentViewController as? ImageViewController {
+////                if iVC.imageURL == nil {
+//                    return .primary
+////                }
+////            }
+//        }
+        print("hello22")
+        return .primary
+    }
 }
